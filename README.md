@@ -51,7 +51,8 @@ layer, SoftMax is used as an activation function. The models are built with
 'adam' optimizer and the loss function used is categorical cross-entropy loss. 
 
 **CNN model with Max-Pooling, Batch Normalization, and Dropout layers got an accuracy of 61.32%.**
-**The final accuracy of ResNet50 is over 78% and for VGG16 it is 99.33%.**
+
+**For transfer learning technique, the final accuracy of ResNet50 is over 78% and for VGG16 it is 99.33%.**
 
 ## Potential Applications
 The output of this project could potentially be used to enhance the existing systems that have
