@@ -27,6 +27,49 @@ Examples of tasks in the distracted category include using one's phone, or reach
 backset, whereas examples of tasks not considered to be distracting include operating the car’s radio
 or talking to a passenger.
 
+## Model Building
+The dataset consists of 22,000 labelled images which were grouped by us into two classes
+i.e., focussed, and distracted drivers. Each class consists of 11,000 images
+and due to this balanced nature of the dataset, the metric that was chosen to
+evaluate the model was "accuracy". 
+
+The dataset contains images of 81 individuals doing various tasks and
+these images were split randomly into 3 parts. That is, 70% of the dataset was
+used for training the model, 20% of the dataset was used for Validating the
+model to tune hyper-parameters and the rest 10% was used as test data to check
+the final accuracy of the model on unseen data.
+
+## Data Specification
+The dataset used contains over 22,000 labelled colour photos of 81 different individuals
+driving a variety of vehicles, performing 10 different tasks. We have decided to approach this as a task
+of binary classification, so we assigned each task to one of two categories; distracted, or focused.
+Examples of tasks in the distracted category include using one's phone, or reaching for items on the
+backset, whereas examples of tasks not considered to be distracting include operating the car’s radio
+or talking to a passenger.
+
+## Model Building
+The dataset consists of 22,000 labelled images which were grouped by us into two classes
+i.e., focussed, and distracted drivers. Each class consists of 11,000 images
+and due to this balanced nature of the dataset, the metric that was chosen to
+evaluate the model was "accuracy". 
+
+The dataset contains images of 81 individuals doing various tasks and
+these images were split randomly into 3 parts. That is, 70% of the dataset was
+used for training the model, 20% of the dataset was used for Validating the
+model to tune hyper-parameters and the rest 10% was used as test data to check
+the final accuracy of the model on unseen data.
+
+We used TensorFlow Keras to implement our model with pre-trained weights of VGG16 and ResNet50 on the
+ImageNet dataset. We used data augmentation as a regularization technique which
+help reduce overfitting. This technique introduces slightly modified versions
+of existing images during training phase. The output of the two transfer
+learning models is connected to 2 final layers, namely, the dense layer with
+1024 nodes having 'Relu' activation and the output layer with 2 nodes
+representing 2 classes i.e., distracted, and focussed class. For the output
+layer, SoftMax is used as an activation function. The models are built with
+'adam' optimizer and the loss function used is categorical cross-entropy loss. 
+
+**The final accuracy of ResNet50 is over 78% and for VGG16 it is 99.33%.**
 
 ## Potential Applications
 The output of this project could potentially be used to enhance the existing systems that have
