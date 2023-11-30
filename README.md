@@ -1,6 +1,6 @@
 # Distracted_Driver_Detection
 
-This project aims to build a deep-learning model capable of detecting drivers who are distracted. The dataset used has been purpose-built and was published to Kaggle by State Farm Insurance. The published dataset contains images of drivers seated at the steering wheel of a car, exhibiting various behaviours. Some of these behaviours are negligent and dangerous, and we have assigned them to a set labelled ‘distracted’.
+This project aims to build a deep-learning model capable of detecting drivers who are distracted. The dataset used has been purpose-built and was published to Kaggle by State Farm Insurance. The published dataset contains images of drivers seated at the steering wheel of a car, exhibiting various behaviours that can be classified into focussed or distracted behaviour.
 
 ![Samples](Sample_image.png)
 
@@ -22,9 +22,8 @@ and therefore easier to detect.
 
 ## Data Specification
 The dataset used contains over 22,000 labelled colour photos of 81 different individuals
-driving a variety of vehicles, performing 10 different tasks. We have decided to approach this as a task
-of binary classification, so we assigned each task to one of two categories; distracted, or focused.
-Examples of tasks in the distracted category include using one's phone, or reaching for items on the
+driving a variety of vehicles, performing 10 different tasks. This was recategorised into just two categories: distracted, or focused, making it a binary classification problem.
+Examples of tasks in the distracted category include using one's phone or reaching for items on the
 backset, whereas examples of tasks not considered to be distracting include operating the car’s radio
 or talking to a passenger.
 
@@ -40,8 +39,8 @@ used for training the model, 20% of the dataset was used for Validating the
 model to tune hyper-parameters and the rest 10% was used as test data to check
 the final accuracy of the model on unseen data.
 
-We used TensorFlow Keras to implement our model with pre-trained weights of VGG16 and ResNet50 on the
-ImageNet dataset. We used data augmentation as a regularization technique which
+Used TensorFlow Keras to implement the model with pre-trained weights of VGG16 and ResNet50 on the
+ImageNet dataset and used data augmentation as a regularization technique which
 help reduce overfitting. This technique introduces slightly modified versions
 of existing images during the training phase. The output of the two transfer
 learning models is connected to 2 final layers, namely, the dense layer with
@@ -65,7 +64,7 @@ the commercial transit and insurance sectors, in which the driving behaviour of 
 customers could be autonomously monitored to determine suggested commercial relationships.
 
 ## Conclusion
-- Built binary classifier that classifies images of drivers into distracted or focused drivers enhancing road safety.
-- Constructed a robust CNN model incorporating Data augmentation, Max-Pooling, Batch Normalization, and Dropout layers, yielding a notable accuracy of 61.32%.
-- Improved the CNN model performance through Transfer Learning, employing pre-trained ResNet50 and VGG16 models to classify the drivers with an accuracy of 73.93% and  99.33%, respectively. 
+- Built binary classifier that classifies images of drivers into distracted or focused drivers **enhancing road safety.**
+- Constructed a robust **CNN model** incorporating Data augmentation, Max-Pooling, Batch Normalization, and Dropout layers, yielding a notable **accuracy of 61.32%.**
+- Improved the CNN model performance through **Transfer Learning**, employing pre-trained ResNet50 and VGG16 models to classify the drivers with an **accuracy of 73.93% and  99.33%**, respectively. 
 
